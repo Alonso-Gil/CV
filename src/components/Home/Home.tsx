@@ -1,10 +1,13 @@
 import { useCycle, useScroll, useSpring, motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { TabsMenu } from "types/common.types";
 
 import Navbar from "../Navbar/Navbar";
 import SideMenuMotion from "../SideMenuMotion/SideMenuMotion";
 import Styles from "./Home.styles";
 import { HomeProps as Props } from "./Home.types";
+import HomeContent from "components/TabsContent/HomeContent/HomeContent";
+import useGlobal from "contexts/global/global.hooks";
 
 const Home: React.FC<Props> = (props) => {
   const [isOpen, toggleOpen] = useCycle(true, false);
@@ -14,6 +17,23 @@ const Home: React.FC<Props> = (props) => {
     damping: 30,
     restDelta: 0.001,
   });
+  const [actualTab, setActualTab] = useState<TabsMenu>("HOME");
+  const { setShowSideMenu } = useGlobal();
+
+  useEffect(() => {
+    setShowSideMenu(isOpen);
+  }, [isOpen, setShowSideMenu]);
+
+  const renderContentTab = () => {
+    switch (actualTab) {
+      case "BINNACLE":
+        return <p className="Home__coming-soon loader">Próximamente...</p>;
+      case "CONTACT":
+        return <p className="Home__coming-soon loader">Próximamente...</p>;
+      default:
+        return <HomeContent />;
+    }
+  };
 
   return (
     <Styles className="Home" showSideMenu={isOpen}>
@@ -23,16 +43,11 @@ const Home: React.FC<Props> = (props) => {
         toggleOpen={toggleOpen}
       />
       <header className="Home__header">
-        <Navbar />
+        <Navbar actualTab={actualTab} setActualTab={setActualTab} />
       </header>
       <main className="Home__main">
         <motion.div className="Home__progress-bar" style={{ scaleX }} />
-        <motion.div className="Home__first" />
-        <motion.div className="Home__second" />
-        <motion.div className="Home__third" />
-        <motion.div className="Home__fourth" />
-        <motion.div className="Home__fifth" />
-        <motion.div className="Home__sixth" />
+        {renderContentTab()}
       </main>
       <footer className="Home__footer" />
     </Styles>

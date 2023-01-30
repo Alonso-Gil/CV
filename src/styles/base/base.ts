@@ -23,12 +23,7 @@ const base = css`
     margin-right: env(safe-area-inset-right);
   }
 
-  h2 {
-    color: var(--palette-blue-s51-l16);
-  }
-
   p {
-    color: var(--palette-blue-s51-l16);
     font-size: 1.6rem;
   }
 
@@ -48,6 +43,30 @@ const base = css`
 
     &::-ms-expand {
       display: none;
+    }
+  }
+
+  .loader {
+    position: relative;
+    background-color: var(--palette-gray-s0-l90);
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        110deg,
+        rgba(227, 227, 227, 0) 0%,
+        rgba(227, 227, 227, 0) 40%,
+        rgba(227, 227, 227, 0.5) 50%,
+        rgba(227, 227, 227, 0) 60%,
+        rgba(227, 227, 227, 0) 100%
+      );
+      animation: gradient-animation 1.4s linear infinite;
     }
   }
 `;
