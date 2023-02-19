@@ -23,6 +23,15 @@ const SideMenuStyled = styled.div<Props>`
       border: 0.6rem solid var(--palette-tertiary);
     }
 
+    &__title {
+      font-size: 2rem;
+      color: var(--palette-white);
+      padding-top: 1rem;
+      font-style: italic;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
     &__socialMediaContainer {
       display: flex;
       justify-content: center;

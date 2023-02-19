@@ -37,7 +37,7 @@ module.exports = {
       extends: [
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:import/typescript"
+        "plugin:import/typescript" 
       ],
       rules: {
         "@typescript-eslint/no-explicit-any": "off",

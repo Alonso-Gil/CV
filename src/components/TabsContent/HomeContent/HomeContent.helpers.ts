@@ -5,7 +5,7 @@ export const skillsData: SkillsData = {
     "React",
     "React Native",
     "Redux",
-    "typescript",
+    "Typescript",
     "Javascript",
     "CSS",
     "HTML",
@@ -26,5 +26,7 @@ export const skillsData: SkillsData = {
     "SplideJS",
     "Vercel",
     "Next.js",
+    "Challenger",
+    "Material UI"
   ],
 };

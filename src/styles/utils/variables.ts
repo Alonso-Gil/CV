@@ -7,6 +7,7 @@ const palette = {
   contrast: "hsla(33, 38%, 59%, 1)",
   black: "hsla(0, 0%, 0%, 1)",
   white: "hsla(0, 0%, 100%, 1)",
+  "black-s0-l10-a50": "hsla(0, 0%, 10%, 0.5)",
   "black-s0-l10": "hsla(0, 0%, 10%, 1)",
   "black-s0-l15": "hsla(0, 0%, 15%, 1)",
   "gray-s0-l20-a04": "hsla(0, 0%, 20%, 0.04)",

@@ -34,6 +34,7 @@ const HomeContentStyled = styled.div<Props>`
       border-bottom: 0.3rem solid var(--palette-quaternary);
       width: min-content;
       white-space: nowrap;
+      font-weight: 600;
     }
 
     &__sub-title {
@@ -43,23 +44,39 @@ const HomeContentStyled = styled.div<Props>`
       border-bottom: 0.3rem solid var(--palette-quaternary);
       width: min-content;
       white-space: nowrap;
+      font-weight: 600;
     }
 
     &__button {
-      padding: 1rem;
-      border: 0.3rem solid var(--palette-quaternary);
       background-color: var(--palette-primary);
-      border-radius: 1rem;
       color: var(--palette-quaternary);
       font-weight: bold;
       font-size: 1.6rem;
       cursor: pointer;
+      border: unset;
+      padding: 0.8rem;
+      border-radius: 50%;
+      transition: all 0.3s;
 
       :hover {
         background-color: var(--palette-quaternary);
         color: white;
-        transition: all 0.3s;
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem var(--palette-black-s0-l10-a50);
+
+        svg path {
+          fill: var(--palette-white);
+        }
       }
+
+      :active {
+        transform: translateY(-0.1rem);
+      }
+    }
+
+    &__brush {
+      width: 3rem;
+      height: 3rem;
     }
 
     &__content {

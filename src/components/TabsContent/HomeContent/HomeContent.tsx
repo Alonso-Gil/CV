@@ -9,6 +9,8 @@ import TextsSplide from "./TextsSplide/TextsSplide";
 import useGlobal from "contexts/global/global.hooks";
 import { skillsData } from "./HomeContent.helpers";
 
+import BrushSVG from "assets/brush.svg";
+
 const HomeContent: React.FC<Props> = (props) => {
   const [showStyle, setShowStyle] = useState(false);
   const { showSideMenu } = useGlobal();
@@ -34,7 +36,7 @@ const HomeContent: React.FC<Props> = (props) => {
           className="HomeContent__button"
           onClick={() => setShowStyle(!showStyle)}
         >
-          Cambiar estilo
+          <BrushSVG className="HomeContent__brush" />
         </button>
       </div>
       <motion.div

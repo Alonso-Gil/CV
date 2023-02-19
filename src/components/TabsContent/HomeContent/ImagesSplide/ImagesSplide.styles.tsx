@@ -7,10 +7,6 @@ const ImagesSplideStyled = styled.div<Props>`
     &__image {
       height: 10rem;
       width: 10rem;
-
-      &--margin {
-        margin-left: 2rem;
-      }
     }
   }
 `;

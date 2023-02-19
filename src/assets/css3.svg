@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 85 85" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#A" x="1.875" y="2.5"/><symbol id="A" overflow="visible"><g stroke="none"><path d="M60 15H0l5 57.5L30 80l25-7.5L60 15" fill="#1572b6"/><path d="M51.739 52.5l.435-5 .652-7.5.652-7.5.652-7.5.435-5H30v55l15.179-4.554 5.134-1.54.67-7.701.67-7.701z" fill="#33a9dc"/><path d="M22 0h-9v11h9V8h-6V3h6zm13 0v3h-5l5 5v3H25V8h5l-5-5V0zm13 0v3h-5l5 5v3H38V8h5l-5-5V0z" fill="#000"/><path d="M24.933 65.98l-2.567-.77-8.214-2.464-.67-7.701-.221-2.545h8l.436 5.009 2.567.77L30 60v7.5zM11.522 32.5h8 2.5H30V25h-8.63-2.5-8z" fill="#ebebeb"/><path d="M30 60l8.304-2.491.435-5.009.435-5H30V40h9.826l.652-7.5H30V25h11.13 8l-.652 7.5-.652 7.5-.652 7.5-.435 5-.221 2.545-.67 7.701-8.214 2.464L30 67.5V60z"/><path d="M30 47.5h-6.674l-.652-7.5H30z" fill="#ebebeb"/></g></symbol></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="100px" height="100px" viewBox="0 0 32.00 32.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/> <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/> </g>
+</svg>

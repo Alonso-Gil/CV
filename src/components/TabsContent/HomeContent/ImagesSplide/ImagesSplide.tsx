@@ -20,12 +20,7 @@ const ImagesSplide: React.FC<Props> = (props) => {
 
   const renderImages: RenderImages[] = [
     { id: 1, content: <JavascriptSVG className="ImagesSplide__image" /> },
-    {
-      id: 2,
-      content: (
-        <Css3SVG className="ImagesSplide__image ImagesSplide__image--margin" />
-      ),
-    },
+    { id: 2, content: <Css3SVG className="ImagesSplide__image" /> },
     { id: 3, content: <Html5SVG className="ImagesSplide__image" /> },
     { id: 4, content: <ReactSVG className="ImagesSplide__image" /> },
     { id: 5, content: <ReduxSVG className="ImagesSplide__image" /> },
