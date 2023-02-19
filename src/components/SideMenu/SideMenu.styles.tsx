@@ -62,9 +62,19 @@ const SideMenuStyled = styled.div<Props>`
 
     &__mainContentItem {
       width: 100%;
-      height: 4rem;
-      border-radius: 4rem;
-      background-color: #d9d9d9;
+    }
+
+    &__subTitle {
+      font-size: 2.2rem;
+      color: var(--palette-quaternary);
+      font-weight: 600;
+    }
+
+    &__description {
+      padding-top: 0.6rem;
+      padding-left: 1rem;
+      font-size: 1.6rem;
+      color: var(--palette-white);
     }
   }
 `;

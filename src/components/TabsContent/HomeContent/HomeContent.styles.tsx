@@ -6,21 +6,22 @@ import CONSTANTS from "config/constants";
 const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const HomeContentStyled = styled.div<Props>`
-  width: 100%;
-  background-color: var(--palette-primary);
-  padding: 4rem;
-  border-radius: 1rem;
-  max-width: 100rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: ${mobile}px) {
-    padding: 2rem;
-  }
-
   .HomeContent {
+    &__skillsContainer {
+      background-color: var(--palette-primary);
+      padding: 4rem;
+      border-radius: 2rem;
+      max-width: 100rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: ${mobile}px) {
+        padding: 2rem;
+      }
+    }
+
     &__container {
       display: flex;
       justify-content: space-between;
@@ -35,6 +36,10 @@ const HomeContentStyled = styled.div<Props>`
       width: min-content;
       white-space: nowrap;
       font-weight: 600;
+
+      @media (max-width: ${mobile}px) {
+        font-size: 2.2rem;
+      }
     }
 
     &__sub-title {
@@ -45,6 +50,13 @@ const HomeContentStyled = styled.div<Props>`
       width: min-content;
       white-space: nowrap;
       font-weight: 600;
+    }
+
+    &__description {
+      padding: 1.4rem;
+      color: var(--palette-tertiary);
+      font-size: 1.8rem;
+      text-align: justify;
     }
 
     &__button {
@@ -130,7 +142,28 @@ const HomeContentStyled = styled.div<Props>`
       &-container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
+      }
+    }
+
+    &__information {
+      padding-top: 4rem;
+      display: flex;
+      gap: 4rem;
+      max-width: 100rem;
+
+      @media (max-width: 1040px) {
+        flex-direction: column;
+      }
+
+      &__profile {
+        background-color: var(--palette-primary);
+        border-radius: 2rem;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
       }
     }
   }
