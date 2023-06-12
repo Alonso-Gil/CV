@@ -8,10 +8,12 @@ import ImagesSplide from "./ImagesSplide/ImagesSplide";
 import TextsSplide from "./TextsSplide/TextsSplide";
 import useGlobal from "contexts/global/global.hooks";
 import { skillsData } from "./HomeContent.helpers";
+import PersonalInformation from "./PersonalInformation/PersonalInformation";
+import Certificates from "./Certificates/Certificates";
+import Languages from "./Languages/Languages";
+import Education from "./Education/Education";
 
 import BrushSVG from "assets/brush.svg";
-import PersonalInformationSVG from "assets/personal-information-icon.svg";
-import SchoolSVG from "assets/school.svg";
 
 const HomeContent: React.FC<Props> = (props) => {
   const [showStyle, setShowStyle] = useState(false);
@@ -84,34 +86,13 @@ const HomeContent: React.FC<Props> = (props) => {
           ) : null}
         </motion.div>
       </div>
-      <div className="HomeContent__information">
-        <div className="HomeContent__information__profile">
-          <div className="HomeContent__personal-icon-container">
-            <PersonalInformationSVG className="HomeContent__personal-icon" />
-          </div>
-          <p className="HomeContent__title">Personal Information</p>
-          <p className="HomeContent__description">
-            I am a{" "}
-            <b>
-              web platform and application developer with React and React Native
-            </b>
-            , with interests in personal and professional growth, in the process
-            of becoming a <b>Fullstack developer at MERN</b> and one day study
-            and learn about Artificial Intelligence.
-          </p>
-        </div>
-        <div className="HomeContent__information__profile">
-          <div className="HomeContent__personal-icon-container">
-            <SchoolSVG className="HomeContent__personal-icon" />
-          </div>
-          <p className="HomeContent__title">Education</p>
-          <p className="HomeContent__description">
-            Graduated in{" "}
-            <b>Ingeniería en Sistemas Estratégicos de la Información (ISEI)</b>,
-            with a specialization in <b>software development</b>, belonging to
-            the Universidad Politécnica de Aguascalientes (UPA).
-          </p>
-        </div>
+      <div className="HomeContent__two-blocks">
+        <PersonalInformation />
+        <Education />
+      </div>
+      <div className="HomeContent__two-blocks">
+        <Certificates />
+        <Languages />
       </div>
     </Styles>
   );

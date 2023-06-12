@@ -149,7 +149,7 @@ const HomeContentStyled = styled.div<Props>`
       }
     }
 
-    &__information {
+    &__two-blocks {
       padding-top: 4rem;
       display: flex;
       gap: 4rem;
@@ -157,35 +157,6 @@ const HomeContentStyled = styled.div<Props>`
 
       @media (max-width: 1040px) {
         flex-direction: column;
-      }
-
-      &__profile {
-        background-color: var(--palette-primary);
-        border-radius: 2rem;
-        width: 100%;
-        padding: 2rem;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-          rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        position: relative;
-      }
-    }
-
-    &__personal-icon-container {
-      padding: 1.2rem;
-      position: absolute;
-      top: -2rem;
-      right: -2rem;
-      background-color: var(--palette-quaternary);
-      border-radius: 20rem;
-      transform: rotate(20deg);
-    }
-
-    &__personal-icon {
-      width: 3.6rem;
-      height: 3.6rem;
-
-      svg path {
-        fill: var(--palette-primary);
       }
     }
   }
