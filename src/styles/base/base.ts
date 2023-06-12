@@ -1,4 +1,7 @@
 import { css } from "styled-components";
+import CONSTANTS from "config/constants";
+
+const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const base = css`
   *,
@@ -67,6 +70,18 @@ const base = css`
         rgba(227, 227, 227, 0) 100%
       );
       animation: gradient-animation 1.4s linear infinite;
+    }
+  }
+
+  .TextsSplide__image {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    @media (max-width: ${mobile}px) {
+      margin-top: 1rem;
     }
   }
 `;

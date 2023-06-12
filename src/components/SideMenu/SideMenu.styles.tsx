@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 import { SideMenuStyledProps as Props } from "./SideMenu.types";
+import CONSTANTS from "config/constants";
+
+const { tablet } = CONSTANTS.BREAKPOINTS;
 
 const SideMenuStyled = styled.div<Props>`
   background-color: var(--palette-secondary);
@@ -55,13 +58,21 @@ const SideMenuStyled = styled.div<Props>`
       padding: 2.6rem 4rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
       gap: 2rem;
       margin-top: 2rem;
+      padding-bottom: 10rem;
+
+      @media (max-width: ${tablet}px) {
+        align-items: center;
+      }
     }
 
     &__mainContentItem {
-      width: 100%;
+      @media (max-width: ${tablet}px) {
+        align-self: center;
+        text-align: center;
+      }
     }
 
     &__subTitle {
@@ -75,6 +86,7 @@ const SideMenuStyled = styled.div<Props>`
       padding-left: 1rem;
       font-size: 1.6rem;
       color: var(--palette-white);
+      letter-spacing: 0.1rem;
     }
   }
 `;

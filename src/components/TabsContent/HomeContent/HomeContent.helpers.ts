@@ -9,6 +9,7 @@ export const skillsData: SkillsData = {
     "Javascript",
     "CSS",
     "HTML",
+    "Next.js",
   ],
   otherSkills: [
     "Context",
@@ -25,8 +26,9 @@ export const skillsData: SkillsData = {
     "Material UI",
     "SplideJS",
     "Vercel",
-    "Next.js",
     "Challenger",
-    "Material UI"
+    "Material UI",
+    "Jest",
+    "PlayWright",
   ],
 };

@@ -20,10 +20,6 @@ const Home: React.FC<Props> = (props) => {
   const [actualTab, setActualTab] = useState<TabsMenu>("HOME");
   const { setShowSideMenu } = useGlobal();
 
-  useEffect(() => {
-    setShowSideMenu(isOpen);
-  }, [isOpen, setShowSideMenu]);
-
   const renderContentTab = () => {
     switch (actualTab) {
       case "BINNACLE":
@@ -34,6 +30,10 @@ const Home: React.FC<Props> = (props) => {
         return <HomeContent />;
     }
   };
+
+  useEffect(() => {
+    setShowSideMenu(isOpen);
+  }, [isOpen, setShowSideMenu]);
 
   return (
     <Styles className="Home" showSideMenu={isOpen}>

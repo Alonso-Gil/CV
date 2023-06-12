@@ -53,10 +53,10 @@ const HomeContentStyled = styled.div<Props>`
     }
 
     &__description {
-      padding: 1.4rem;
+      padding-top: 1.4rem;
       color: var(--palette-tertiary);
       font-size: 1.8rem;
-      text-align: justify;
+      line-height: 2.6rem;
     }
 
     &__button {
@@ -92,14 +92,16 @@ const HomeContentStyled = styled.div<Props>`
     }
 
     &__content {
+      width: 100%;
       display: flex;
       flex-direction: column;
     }
 
     &__splide {
+      width: 100%;
       padding-top: 2rem;
-      align-self: center;
-      justify-self: center;
+      display: flex;
+      flex-direction: column;
     }
 
     &__content-static {
@@ -164,6 +166,26 @@ const HomeContentStyled = styled.div<Props>`
         padding: 2rem;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
           rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        position: relative;
+      }
+    }
+
+    &__personal-icon-container {
+      padding: 1.2rem;
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      background-color: var(--palette-quaternary);
+      border-radius: 20rem;
+      transform: rotate(20deg);
+    }
+
+    &__personal-icon {
+      width: 3.6rem;
+      height: 3.6rem;
+
+      svg path {
+        fill: var(--palette-primary);
       }
     }
   }

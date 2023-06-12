@@ -8,6 +8,7 @@ const { tablet, mobile } = CONSTANTS.BREAKPOINTS;
 const HomeStyled = styled.div<Props>`
   background-color: #fff;
   display: grid;
+  min-height: var(--sizes-page-minHeight);
   grid-template-columns: ${(props) =>
     props.showSideMenu ? "32rem 3fr" : "1fr"};
   grid-template-rows: 6rem 1fr;
@@ -23,10 +24,11 @@ const HomeStyled = styled.div<Props>`
 
   .Home {
     &__sideMenu {
-      height: ${(props) => (props.showSideMenu ? "100vh" : "10rem")};
+      height: ${(props) => (props.showSideMenu ? "110vh" : "14rem")};
       position: fixed;
       width: 32rem;
       z-index: ${(props) => (props.showSideMenu ? 4 : 1)};
+      overflow-y: ${(props) => (props.showSideMenu ? "auto" : "hidden")};
 
       @media (max-width: ${tablet}px) {
         width: 100%;
@@ -51,10 +53,10 @@ const HomeStyled = styled.div<Props>`
       background-color: var(--palette-white);
       position: relative;
       padding: 4rem;
-      width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      position: relative;
 
       @media (max-width: ${tablet}px) {
         gap: 2rem;
@@ -79,6 +81,12 @@ const HomeStyled = styled.div<Props>`
       @media (max-width: ${tablet}px) {
         margin-left: unset;
       }
+    }
+
+    &__switch-dark-mode {
+      position: absolute;
+      bottom: 4rem;
+      right: 4rem;
     }
 
     &__coming-soon {

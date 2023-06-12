@@ -60,7 +60,7 @@ const SideMenu: React.FC<Props> = (props) => {
           whileTap={{ scale: 1 }}
         >
           <h2 className="SideMenu__subTitle">Ubicación</h2>
-          <p className="SideMenu__description">México, Aguascalientes</p>
+          <p className="SideMenu__description">Aguascalientes, México</p>
         </motion.div>
         <motion.div
           className="SideMenu__mainContentItem"

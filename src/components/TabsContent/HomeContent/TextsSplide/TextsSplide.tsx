@@ -8,7 +8,8 @@ import Image from "next/image";
 import Styles from "./TextsSplide.styles";
 import { TextsSplideProps as Props } from "./TextsSplide.types";
 import useGlobal from "contexts/global/global.hooks";
-import { divideArray, splideConfig } from "./TextsSplide.helpers";
+import { divideArray } from "./TextsSplide.helpers";
+import { splideConfig } from "utils/common.utils";
 
 import ChallengerPNG from "assets/challenger-2022.png";
 
@@ -39,14 +40,15 @@ const TextsSplide: React.FC<Props> = (props) => {
           <Splide
             key={index}
             aria-label="Technologies"
-            className="HomeContent__splide"
+            className="TextsSplide__splide"
             extensions={{ AutoScroll }}
+            // @ts-ignore Esta librería es muy mala para manejar estilos responsivos
             options={splideConfig(showSideMenu, direction) as Options}
           >
             {item.map((skill, index) => (
               <SplideSlide key={index}>
                 <p
-                  className="HomeContent__other-skills"
+                  className="TextsSplide__other-skills"
                   onClick={() => (skill === "Challenger" ? showModal() : null)}
                 >
                   {skill}
@@ -63,7 +65,9 @@ const TextsSplide: React.FC<Props> = (props) => {
         onCancel={handleCancel}
         footer=""
       >
-        <Image src={ChallengerPNG} alt="Challenger" width={470} priority />
+        <div className="TextsSplide__image">
+          <Image src={ChallengerPNG} alt="Challenger" width={470} priority />
+        </div>
       </Modal>
     </Styles>
   );

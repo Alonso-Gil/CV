@@ -6,13 +6,15 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import Styles from "./ImagesSplide.styles";
 import { ImagesSplideProps as Props, RenderImages } from "./ImagesSplide.types";
 import useGlobal from "contexts/global/global.hooks";
+import { splideConfig } from "utils/common.utils";
 
-import Css3SVG from "assets/css3.svg";
-import Html5SVG from "assets/html5.svg";
-import ReactSVG from "assets/react.svg";
-import ReduxSVG from "assets/redux.svg";
-import TypescriptSVG from "assets/typescript.svg";
-import JavascriptSVG from "assets/javascript.svg";
+import Css3SVG from "assets/SkillsImages/css3.svg";
+import Html5SVG from "assets/SkillsImages/html5.svg";
+import ReactSVG from "assets/SkillsImages/react.svg";
+import ReduxSVG from "assets/SkillsImages/redux.svg";
+import TypescriptSVG from "assets/SkillsImages/typescript.svg";
+import JavascriptSVG from "assets/SkillsImages/javascript.svg";
+import NextSVG from "assets/SkillsImages/next.svg";
 
 const ImagesSplide: React.FC<Props> = (props) => {
   const { className } = props;
@@ -25,6 +27,7 @@ const ImagesSplide: React.FC<Props> = (props) => {
     { id: 4, content: <ReactSVG className="ImagesSplide__image" /> },
     { id: 5, content: <ReduxSVG className="ImagesSplide__image" /> },
     { id: 6, content: <TypescriptSVG className="ImagesSplide__image" /> },
+    { id: 7, content: <NextSVG className="ImagesSplide__image" /> },
   ];
 
   return (
@@ -32,34 +35,8 @@ const ImagesSplide: React.FC<Props> = (props) => {
       <Splide
         aria-label="Technologies"
         extensions={{ AutoScroll }}
-        options={{
-          type: "loop",
-          gap: "10px",
-          drag: "free",
-          arrows: false,
-          pagination: false,
-          perPage: 3,
-          autoWidth: true,
-          breakpoints: showSideMenu
-            ? {
-                2000: { width: 500 },
-                1000: { width: 280 },
-                620: { width: 200 },
-                340: { width: 180 },
-              }
-            : {
-                2000: { width: 500 },
-                1000: { width: 280 },
-                620: { width: 200 },
-                340: { width: 180 },
-              },
-          autoScroll: {
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            rewind: true,
-            speed: 0.4,
-          },
-        }}
+        // @ts-ignore Esta librería es muy mala para manejar estilos responsivos
+        options={splideConfig(showSideMenu) as Options}
       >
         {renderImages.map((image: RenderImages) => {
           const { id, content } = image;
