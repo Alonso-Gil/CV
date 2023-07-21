@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { notification } from "antd";
 
 import Styles from "./SideMenu.styles";
 import { SideMenuProps as Props } from "./SideMenu.types";
 import { socialMediaImages } from "./SideMenu.helpers";
-import { notification } from "antd";
 
 import ProfilePNG from "assets/profile.png";
+
 const SideMenu: React.FC<Props> = (props) => {
   const { className } = props;
 
@@ -59,7 +60,7 @@ const SideMenu: React.FC<Props> = (props) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1 }}
         >
-          <h2 className="SideMenu__subTitle">Ubicación</h2>
+          <h2 className="SideMenu__subTitle">Location</h2>
           <p className="SideMenu__description">Aguascalientes, México</p>
         </motion.div>
         <motion.div
@@ -67,7 +68,7 @@ const SideMenu: React.FC<Props> = (props) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1 }}
         >
-          <h2 className="SideMenu__subTitle">Celular</h2>
+          <h2 className="SideMenu__subTitle">Cellphone</h2>
           <p className="SideMenu__description">+52 (449) 365 6642</p>
         </motion.div>
       </div>

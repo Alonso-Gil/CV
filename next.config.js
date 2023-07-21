@@ -2,11 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    styleLoader: true,
-    styleLoaderOptions: {
-      injectType: "styleTag",
-    },
+  compiler: {
+    styledComponents: true,
   },
   webpack(config) {
     config.module.rules.push({

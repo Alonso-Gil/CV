@@ -6,7 +6,7 @@ import CONSTANTS from "config/constants";
 const { tablet, mobile } = CONSTANTS.BREAKPOINTS;
 
 const HomeStyled = styled.div<Props>`
-  background-color: #fff;
+  background-color: var(--palette-white);
   display: grid;
   min-height: var(--sizes-page-minHeight);
   grid-template-columns: ${(props) =>
@@ -56,17 +56,15 @@ const HomeStyled = styled.div<Props>`
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      position: relative;
 
       @media (max-width: ${tablet}px) {
         gap: 2rem;
         padding: 2rem;
-        padding-top: 8rem;
+        padding-top: 10rem;
       }
     }
 
     &__progress-bar {
-      position: absolute;
       position: fixed;
       top: 6rem;
       left: 0;

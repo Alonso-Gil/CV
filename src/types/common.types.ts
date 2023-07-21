@@ -1,1 +1,1 @@
-export type TabsMenu = "HOME" | "BINNACLE" | "CONTACT";
+export type TabsMenu = "HOME" | "PROJECTS" | "CONTACT";

@@ -1,7 +1,7 @@
 import defaultTheme from "./default";
 
 const palette = { ...defaultTheme.palette };
-palette.primary = "#000";
+palette.white = "#CCCCCC";
 
 const theme = { ...defaultTheme, palette };
 

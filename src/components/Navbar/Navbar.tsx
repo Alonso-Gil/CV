@@ -12,19 +12,19 @@ const Navbar: React.FC<Props> = (props) => {
         className={actualTab === "HOME" ? `Navbar--active` : ""}
         onClick={() => setActualTab("HOME")}
       >
-        Inicio
+        Home
       </p>
       <p
-        className={actualTab === "BINNACLE" ? `Navbar--active` : ""}
-        onClick={() => setActualTab("BINNACLE")}
+        className={actualTab === "PROJECTS" ? `Navbar--active` : ""}
+        onClick={() => setActualTab("PROJECTS")}
       >
-        Bitácora
+        Projects
       </p>
       <p
         className={actualTab === "CONTACT" ? `Navbar--active` : ""}
         onClick={() => setActualTab("CONTACT")}
       >
-        Contacto
+        Contact
       </p>
     </Styles>
   );

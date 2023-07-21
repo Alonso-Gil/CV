@@ -30,5 +30,6 @@ export const skillsData: SkillsData = {
     "Material UI",
     "Jest",
     "PlayWright",
+    "Zustand",
   ],
 };

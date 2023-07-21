@@ -26,9 +26,7 @@ const HomeContent: React.FC<Props> = (props) => {
     },
     hidden: {
       opacity: 0,
-      transitionEnd: {
-        display: "none",
-      },
+      display: "none",
     },
   };
 
@@ -49,41 +47,33 @@ const HomeContent: React.FC<Props> = (props) => {
           animate={showStyle ? variants.visible : variants.hidden}
           transition={{ duration: 1 }}
         >
-          {showStyle ? (
-            <>
-              <ImagesSplide className="HomeContent__splide" />
-              <h2 className="HomeContent__sub-title">Other Skills</h2>
-              <TextsSplide
-                className="HomeContent__splide"
-                otherSkills={otherSkills}
-              />
-            </>
-          ) : null}
+          <ImagesSplide className="HomeContent__splide" />
+          <h2 className="HomeContent__sub-title">Other Skills</h2>
+          <TextsSplide
+            className="HomeContent__splide"
+            otherSkills={otherSkills}
+          />
         </motion.div>
         <motion.div
           className="HomeContent__content-static"
           animate={showStyle ? variants.hidden : variants.visible}
           transition={{ duration: 1 }}
         >
-          {!showStyle ? (
-            <>
-              <div className="HomeContent__skills-container">
-                {principalSkills.map((skill, index) => (
-                  <p className="HomeContent__skills" key={index}>
-                    {skill}
-                  </p>
-                ))}
-              </div>
-              <h2 className="HomeContent__sub-title">Other Skills</h2>
-              <div className="HomeContent__other-skills-container">
-                {otherSkills.map((skill, index) => (
-                  <p className="HomeContent__other-skills" key={index}>
-                    {skill}
-                  </p>
-                ))}
-              </div>
-            </>
-          ) : null}
+          <div className="HomeContent__skills-container">
+            {principalSkills.map((skill, index) => (
+              <p className="HomeContent__skills" key={index}>
+                {skill}
+              </p>
+            ))}
+          </div>
+          <h2 className="HomeContent__sub-title">Other Skills</h2>
+          <div className="HomeContent__other-skills-container">
+            {otherSkills.map((skill, index) => (
+              <p className="HomeContent__other-skills" key={index}>
+                {skill}
+              </p>
+            ))}
+          </div>
         </motion.div>
       </div>
       <div className="HomeContent__two-blocks">
