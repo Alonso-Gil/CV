@@ -1,4 +1,4 @@
-const palette = {
+export const palette = {
   empty: "", // Fixes a bug with styled components that appends a coma
   primary: "hsla(208, 17%, 58%, 1)",
   secondary: "hsla(208, 19%, 38%, 1)",

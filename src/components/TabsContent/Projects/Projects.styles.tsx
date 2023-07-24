@@ -6,37 +6,25 @@ import CONSTANTS from "config/constants";
 const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const ProjectsStyled = styled.div<Props>`
-  width: 100%;
-  background-color: var(--palette-primary);
-  padding: 4rem;
-  border-radius: 2rem;
-  max-width: 100rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
   @media (max-width: ${mobile}px) {
     padding: 2rem;
   }
 
   .Projects {
-    &__container {
-      display: flex;
-      gap: 6rem;
-      padding-bottom: 2.6rem;
+    &__motion {
+      pointer-events: none;
+      position: absolute;
+      inset: -1px;
+      border-radius: 0.4rem;
+    }
+
+    &__item {
+      align-self: center;
+      justify-content: center;
+      flex-basis: 50%;
 
       @media (max-width: 1200px) {
-        flex-wrap: wrap;
-        gap: 4rem;
-      }
-
-      &-item {
-        align-self: center;
-        justify-content: center;
-        flex-basis: 50%;
-
-        @media (max-width: 1200px) {
-          flex-basis: 100%;
-        }
+        flex-basis: 100%;
       }
     }
 
@@ -102,34 +90,6 @@ const ProjectsStyled = styled.div<Props>`
       font-size: 1.5rem;
       color: var(--palette-tertiary);
       max-width: 40rem;
-    }
-
-    &__accordion {
-      border: unset;
-      background-color: unset;
-    }
-
-    &__panel {
-      border: unset;
-
-      .ant-collapse-header {
-        display: flex;
-        align-items: center;
-      }
-
-      .ant-collapse-header-text {
-        color: var(--palette-tertiary);
-        font-size: 1.6rem;
-        font-weight: 500;
-      }
-
-      .ant-collapse-content {
-        border: unset;
-      }
-
-      .ant-collapse-content-box {
-        background-color: var(--palette-primary);
-      }
     }
   }
 `;
