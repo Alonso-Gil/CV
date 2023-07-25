@@ -12,6 +12,7 @@ import PersonalInformation from "./PersonalInformation/PersonalInformation";
 import Certificates from "./Certificates/Certificates";
 import Languages from "./Languages/Languages";
 import Education from "./Education/Education";
+import SkillCard from "./SkillCard/SkillCard";
 
 import BrushSVG from "assets/brush.svg";
 
@@ -59,19 +60,15 @@ const HomeContent: React.FC<Props> = (props) => {
           animate={showStyle ? variants.hidden : variants.visible}
           transition={{ duration: 1 }}
         >
-          <div className="HomeContent__skills-container">
-            {principalSkills.map((skill, index) => (
-              <p className="HomeContent__skills" key={index}>
-                {skill}
-              </p>
-            ))}
+          <div className="HomeContent__itemsSkillsContainer">
+            {principalSkills.map((skill, index) => {
+              return <SkillCard skill={skill} principal key={index} />;
+            })}
           </div>
           <h2 className="HomeContent__sub-title">Other Skills</h2>
-          <div className="HomeContent__other-skills-container">
+          <div className="HomeContent__itemsSkillsContainer">
             {otherSkills.map((skill, index) => (
-              <p className="HomeContent__other-skills" key={index}>
-                {skill}
-              </p>
+              <SkillCard skill={skill} key={index} />
             ))}
           </div>
         </motion.div>

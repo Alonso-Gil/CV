@@ -18,7 +18,7 @@ const ThemeProvider: React.FC<Props> = (props) => {
   const { theme } = props;
   const { light, dark } = themes;
   const initialTheme =
-    isDarkThemePreferredSync() && WITH_DARK_MODE ? dark : light;
+    isDarkThemePreferredSync() && WITH_DARK_MODE ? light : dark;
   const [selectedTheme, setSelectedTheme] = useState(theme ?? initialTheme);
 
   const value: ThemeProviderValue = useMemo(() => {

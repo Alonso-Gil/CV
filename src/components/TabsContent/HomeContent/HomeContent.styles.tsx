@@ -6,16 +6,26 @@ import CONSTANTS from "config/constants";
 const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const HomeContentStyled = styled.div<Props>`
+  z-index: 1;
+
   .HomeContent {
     &__skillsContainer {
-      background-color: var(--palette-primary);
       padding: 4rem;
       border-radius: 2rem;
       max-width: 100rem;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
       display: flex;
       flex-direction: column;
+      background-color: var(--palette-backgroundOpacity);
+      border: 0.1rem solid var(--palette-background);
+      transition-property: background-color, border;
+      transition-duration: 1s;
+
+      :hover {
+        background-color: var(--palette-backgroundHover);
+        border: 0.1rem solid var(--palette-border);
+        transition-property: background-color, border;
+        transition-duration: 0.3s;
+      }
 
       @media (max-width: ${mobile}px) {
         padding: 2rem;
@@ -31,8 +41,8 @@ const HomeContentStyled = styled.div<Props>`
 
     &__title {
       font-size: 2.6rem;
-      color: var(--palette-quaternary);
-      border-bottom: 0.3rem solid var(--palette-quaternary);
+      color: var(--palette-white);
+      border-bottom: 0.3rem solid var(--palette-white);
       width: min-content;
       white-space: nowrap;
       font-weight: 600;
@@ -45,8 +55,8 @@ const HomeContentStyled = styled.div<Props>`
     &__sub-title {
       padding-top: 2rem;
       font-size: 2.6rem;
-      color: var(--palette-quaternary);
-      border-bottom: 0.3rem solid var(--palette-quaternary);
+      color: var(--palette-white);
+      border-bottom: 0.3rem solid var(--palette-white);
       width: min-content;
       white-space: nowrap;
       font-weight: 600;
@@ -60,15 +70,17 @@ const HomeContentStyled = styled.div<Props>`
     }
 
     &__button {
-      background-color: var(--palette-primary);
-      color: var(--palette-quaternary);
-      font-weight: bold;
-      font-size: 1.6rem;
+      background-image: var(--palette-gradient);
       cursor: pointer;
       border: unset;
-      padding: 0.8rem;
+      width: 4.6rem;
+      height: 4.6rem;
       border-radius: 50%;
       transition: all 0.3s;
+
+      svg path {
+        fill: var(--palette-background);
+      }
 
       :hover {
         background-color: var(--palette-quaternary);
@@ -111,42 +123,11 @@ const HomeContentStyled = styled.div<Props>`
       gap: 2rem;
     }
 
-    &__skills {
-      color: var(--palette-white);
-      font-size: 2rem;
-      font-weight: bold;
-      background-color: var(--palette-contrast);
-      border-radius: 1rem;
-      text-align: center;
-      width: min-content;
-      white-space: nowrap;
-      padding: 1rem;
-
-      &-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-      }
-    }
-
-    &__other-skills {
-      color: var(--palette-white);
-      font-size: 2rem;
-      font-weight: bold;
-      background-color: var(--palette-quaternary);
-      border-radius: 1rem;
-      text-align: center;
-      width: min-content;
-      white-space: nowrap;
-      padding: 1rem;
-
-      &-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
+    &__itemsSkillsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
 
     &__two-blocks {
@@ -154,6 +135,7 @@ const HomeContentStyled = styled.div<Props>`
       display: flex;
       gap: 4rem;
       max-width: 100rem;
+      margin: 0 1rem;
 
       @media (max-width: 1040px) {
         flex-direction: column;

@@ -1,4 +1,4 @@
-import light from "./default";
+import light from "./light";
 import dark from "./dark";
 
 const themes = {

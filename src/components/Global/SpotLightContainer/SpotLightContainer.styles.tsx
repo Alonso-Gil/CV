@@ -7,14 +7,23 @@ const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const SpotLightContainerStyled = styled.div<Props>`
   width: 100%;
-  background-color: var(--palette-primary);
+  backdrop-filter: blur(0.1rem);
   padding: 4rem;
   border-radius: 2rem;
   max-width: 100rem;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
   position: relative;
+  background-color: var(--palette-backgroundOpacity);
+  border: 0.1rem solid var(--palette-background);
+  transition-property: background-color, border;
+  transition-duration: 1s;
+
+  :hover {
+    background-color: var(--palette-backgroundHover);
+    border: 0.1rem solid var(--palette-border);
+    transition-property: background-color, border;
+    transition-duration: 0.3s;
+  }
 
   @media (max-width: ${mobile}px) {
     padding: 2rem;

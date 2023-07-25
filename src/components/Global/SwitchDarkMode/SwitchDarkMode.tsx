@@ -11,7 +11,7 @@ import MoonSVG from "assets/moon.svg";
 
 const SwitchDarkMode: React.FC<Props> = (props) => {
   const { setSelectedTheme } = useTheme();
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const controls = useAnimation();
   const { dark, light } = themes;
 

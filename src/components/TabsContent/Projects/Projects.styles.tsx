@@ -6,6 +6,8 @@ import CONSTANTS from "config/constants";
 const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const ProjectsStyled = styled.div<Props>`
+  border-radius: 2rem;
+
   @media (max-width: ${mobile}px) {
     padding: 2rem;
   }
@@ -54,7 +56,7 @@ const ProjectsStyled = styled.div<Props>`
 
     &__title {
       font-size: 2.6rem;
-      color: var(--palette-quaternary);
+      color: var(--palette-white);
       font-weight: 600;
 
       @media (max-width: ${mobile}px) {
@@ -74,7 +76,7 @@ const ProjectsStyled = styled.div<Props>`
 
     &__description {
       padding-top: 1.4rem;
-      color: var(--palette-tertiary);
+      color: var(--palette-white);
       font-size: 1.8rem;
       line-height: 2.6rem;
     }
@@ -88,7 +90,7 @@ const ProjectsStyled = styled.div<Props>`
 
     &__mallDescription {
       font-size: 1.5rem;
-      color: var(--palette-tertiary);
+      color: var(--palette-white);
       max-width: 40rem;
     }
   }

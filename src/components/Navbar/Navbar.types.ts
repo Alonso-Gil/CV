@@ -10,5 +10,4 @@ export interface NavbarProps {
 // Styled Component Props
 export interface NavbarStyledProps {
   className: string;
-  actualTab: TabsMenu;
 }

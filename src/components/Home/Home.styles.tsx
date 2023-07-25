@@ -8,6 +8,7 @@ const { tablet, mobile } = CONSTANTS.BREAKPOINTS;
 const HomeStyled = styled.div<Props>`
   background-color: var(--palette-white);
   display: grid;
+  position: relative;
   min-height: var(--sizes-page-minHeight);
   grid-template-columns: ${(props) =>
     props.showSideMenu ? "32rem 3fr" : "1fr"};
@@ -27,7 +28,7 @@ const HomeStyled = styled.div<Props>`
       height: ${(props) => (props.showSideMenu ? "110vh" : "14rem")};
       position: fixed;
       width: 32rem;
-      z-index: ${(props) => (props.showSideMenu ? 4 : 1)};
+      z-index: ${(props) => (props.showSideMenu ? 4 : 2)};
       overflow-y: ${(props) => (props.showSideMenu ? "auto" : "hidden")};
 
       @media (max-width: ${tablet}px) {
@@ -39,7 +40,7 @@ const HomeStyled = styled.div<Props>`
       width: 100%;
       height: 6rem;
       position: fixed;
-      z-index: ${(props) => (props.showSideMenu ? 1 : 4)};
+      z-index: ${(props) => (props.showSideMenu ? 2 : 4)};
       padding-left: ${(props) => (props.showSideMenu ? "32rem" : 0)};
       transition: all 0.3s;
 
@@ -50,7 +51,7 @@ const HomeStyled = styled.div<Props>`
 
     &__main {
       grid-area: main;
-      background-color: var(--palette-white);
+      background-color: var(--palette-background);
       position: relative;
       padding: 4rem;
       display: flex;
@@ -62,6 +63,23 @@ const HomeStyled = styled.div<Props>`
         padding: 2rem;
         padding-top: 10rem;
       }
+    }
+
+    &__topGradient {
+      position: absolute;
+      top: -40rem;
+      width: 100%;
+      height: 100rem;
+      background: radial-gradient(
+        150% 150% at 50% 20%,
+        var(--palette-primary),
+        var(--palette-secondary),
+        var(--palette-tertiary),
+        var(--palette-quaternary),
+        var(--palette-background),
+        transparent 60%
+      );
+      z-index: 0;
     }
 
     &__progress-bar {

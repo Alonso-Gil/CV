@@ -6,5 +6,5 @@ export interface HomeProps {}
 // Styled Component Props
 export interface HomeStyledProps {
   className: string;
-  showSideMenu: boolean;
+  showSideMenu?: boolean;
 }

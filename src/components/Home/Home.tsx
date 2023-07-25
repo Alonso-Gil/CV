@@ -1,19 +1,18 @@
-import { useCycle, useScroll, useSpring, motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { TabsMenu } from "types/common.types";
 
 import Navbar from "../Navbar/Navbar";
-import SideMenuMotion from "../SideMenuMotion/SideMenuMotion";
+// import SideMenuMotion from "../SideMenuMotion/SideMenuMotion";
 import Styles from "./Home.styles";
 import { HomeProps as Props } from "./Home.types";
 import HomeContent from "components/TabsContent/HomeContent/HomeContent";
-import useGlobal from "contexts/global/global.hooks";
 import Projects from "components/TabsContent/Projects/Projects";
 import SwitchDarkMode from "components/Global/SwitchDarkMode/SwitchDarkMode";
 
 const Home: React.FC<Props> = (props) => {
-  const [isOpen, toggleOpen] = useCycle(true, false);
+  // const [isOpen, toggleOpen] = useCycle(true, false);
   const { scrollYProgress } = useScroll();
   const controls = useAnimation();
 
@@ -23,7 +22,7 @@ const Home: React.FC<Props> = (props) => {
     restDelta: 0.001,
   });
   const [actualTab, setActualTab] = useState<TabsMenu>("HOME");
-  const { setShowSideMenu } = useGlobal();
+  // const { setShowSideMenu } = useGlobal();
   const animationVariants = {
     hidden: {
       opacity: 0,
@@ -54,18 +53,18 @@ const Home: React.FC<Props> = (props) => {
     window.scrollTo(0, 0);
   }, [controls]);
 
-  useEffect(() => {
-    setShowSideMenu(isOpen);
-  }, [isOpen, setShowSideMenu]);
+  // useEffect(() => {
+  //   setShowSideMenu(isOpen);
+  // }, [isOpen, setShowSideMenu]);
 
   return (
-    <Styles className="Home" showSideMenu={isOpen}>
+    <Styles className="Home">
       <SwitchDarkMode />
-      <SideMenuMotion
+      {/* <SideMenuMotion
         className="Home__sideMenu"
         isOpen={isOpen}
         toggleOpen={toggleOpen}
-      />
+      /> */}
       <header className="Home__header">
         <Navbar actualTab={actualTab} setActualTab={setActualTab} />
       </header>
@@ -76,6 +75,7 @@ const Home: React.FC<Props> = (props) => {
         variants={animationVariants}
       >
         <motion.div className="Home__progress-bar" style={{ scaleX }} />
+        <div className="Home__topGradient" />
         {renderContentTab()}
       </motion.main>
       <footer className="Home__footer" />

@@ -4,7 +4,6 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 import Styles from "./SpotLightContainer.styles";
 import { SpotLightContainerProps as Props } from "./SpotLightContainer.types";
-import { palette } from "styles/utils/variables";
 
 const { Panel } = Collapse;
 
@@ -13,7 +12,6 @@ const SpotLightContainer: React.FC<Props> = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const constantColor = useMotionValue(palette.contrast);
 
   const handleMouseMove = ({ currentTarget, clientX, clientY }: MouseEvent) => {
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -49,8 +47,10 @@ const SpotLightContainer: React.FC<Props> = (props) => {
           background: useMotionTemplate`
             radial-gradient(
             650px circle at ${mouseX}px ${mouseY}px,
-            ${constantColor},
-            transparent 80%
+            #7F6D83,
+            #51495B,
+            #292835,
+            transparent 60%
           )`,
         }}
         animate={{
