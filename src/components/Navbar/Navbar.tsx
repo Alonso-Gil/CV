@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Styles from "./Navbar.styles";
 import { NavbarProps as Props } from "./Navbar.types";
 
-import HomeSVG from "assets/home.svg";
-import FolderSVG from "assets/folder.svg";
-import UserSVG from "assets/user.svg";
+import HomeSVG from "assets/images/home.svg";
+import FolderSVG from "assets/images/folder.svg";
+import UserSVG from "assets/images/user.svg";
 
 const Navbar: React.FC<Props> = (props) => {
   const { actualTab, setActualTab } = props;

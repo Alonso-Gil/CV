@@ -1,6 +1,6 @@
-import WhatsAppSVG from "assets/whatsapp.svg";
-import GitHubSVG from "assets/github.svg";
-import LinkedInSVG from "assets/linkedin.svg";
+import WhatsAppSVG from "assets/images/whatsapp.svg";
+import GitHubSVG from "assets/images/github.svg";
+import LinkedInSVG from "assets/images/linkedin.svg";
 
 export const socialMediaImages = [
   {

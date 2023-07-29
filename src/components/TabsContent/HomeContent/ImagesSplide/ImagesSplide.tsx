@@ -8,13 +8,13 @@ import { ImagesSplideProps as Props, RenderImages } from "./ImagesSplide.types";
 import useGlobal from "contexts/global/global.hooks";
 import { splideConfig } from "utils/common.utils";
 
-import Css3SVG from "assets/SkillsImages/css3.svg";
-import Html5SVG from "assets/SkillsImages/html5.svg";
-import ReactSVG from "assets/SkillsImages/react.svg";
-import ReduxSVG from "assets/SkillsImages/redux.svg";
-import TypescriptSVG from "assets/SkillsImages/typescript.svg";
-import JavascriptSVG from "assets/SkillsImages/javascript.svg";
-import NextSVG from "assets/SkillsImages/next.svg";
+import Css3SVG from "assets/images/SkillsImages/css3.svg";
+import Html5SVG from "assets/images/SkillsImages/html5.svg";
+import ReactSVG from "assets/images/SkillsImages/react.svg";
+import ReduxSVG from "assets/images/SkillsImages/redux.svg";
+import TypescriptSVG from "assets/images/SkillsImages/typescript.svg";
+import JavascriptSVG from "assets/images/SkillsImages/javascript.svg";
+import NextSVG from "assets/images/SkillsImages/next.svg";
 
 const ImagesSplide: React.FC<Props> = (props) => {
   const { className } = props;

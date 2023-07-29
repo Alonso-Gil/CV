@@ -5,8 +5,8 @@ import Styles from "./Projects.styles";
 import { ProjectsProps as Props } from "./Projects.types";
 import ProjectDk from "./ProjectDk/ProjectDk";
 
-import DKSVG from "assets/DK/dk-logo.png";
-import DKMallSVG from "assets/DK/dk-mall.png";
+import DKSVG from "assets/images/DK/dk-logo.png";
+import DKMallSVG from "assets/images/DK/dk-mall.png";
 import SpotLightContainer from "components/Global/SpotLightContainer/SpotLightContainer";
 
 const Projects: React.FC<Props> = (props) => {

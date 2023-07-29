@@ -3,7 +3,7 @@ import React from "react";
 import Styles from "./ProjectDk.styles";
 import { ProjectDkProps as Props } from "./ProjectDk.types";
 
-import CalendarSVG from "assets/icons/calendar.svg";
+import CalendarSVG from "assets/images/icons/calendar.svg";
 
 const ProjectDk: React.FC<Props> = (props) => {
   return (

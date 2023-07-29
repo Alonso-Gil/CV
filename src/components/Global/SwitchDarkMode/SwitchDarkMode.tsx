@@ -6,8 +6,8 @@ import { SwitchDarkModeProps as Props } from "./SwitchDarkMode.types";
 import useTheme from "contexts/theme/theme.hooks";
 import themes from "styles/theme";
 
-import SunSVG from "assets/sun.svg";
-import MoonSVG from "assets/moon.svg";
+import SunSVG from "assets/images/sun.svg";
+import MoonSVG from "assets/images/moon.svg";
 
 const SwitchDarkMode: React.FC<Props> = (props) => {
   const { setSelectedTheme } = useTheme();

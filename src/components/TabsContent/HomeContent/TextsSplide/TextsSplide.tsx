@@ -11,7 +11,7 @@ import useGlobal from "contexts/global/global.hooks";
 import { divideArray } from "./TextsSplide.helpers";
 import { splideConfig } from "utils/common.utils";
 
-import ChallengerPNG from "assets/challenger-2022.png";
+import ChallengerPNG from "assets/images/challenger-2022.png";
 
 const TextsSplide: React.FC<Props> = (props) => {
   const { className, otherSkills } = props;

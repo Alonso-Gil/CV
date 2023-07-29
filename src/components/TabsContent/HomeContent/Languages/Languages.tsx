@@ -1,10 +1,10 @@
 import { LanguagesProps as Props } from "./Languages.types";
 import Styles from "./Languages.styles";
 
-import WorldSVG from "assets/world.svg";
-import GermanySVG from "assets/Countries/germany.svg";
-import SpainSVG from "assets/Countries/spain.svg";
-import UnitedStatesSVG from "assets/Countries/usa.svg";
+import WorldSVG from "assets/images/world.svg";
+import GermanySVG from "assets/images/Countries/germany.svg";
+import SpainSVG from "assets/images/Countries/spain.svg";
+import UnitedStatesSVG from "assets/images/Countries/usa.svg";
 
 const Languages: React.FC<Props> = (props) => {
   return (

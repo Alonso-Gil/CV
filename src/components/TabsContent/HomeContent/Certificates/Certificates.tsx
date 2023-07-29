@@ -1,7 +1,7 @@
 import { CertificatesProps as Props } from "./Certificates.types";
 import Styles from "./Certificates.styles";
 
-import CertificationSVG from "assets/certification.svg";
+import CertificationSVG from "assets/images/certification.svg";
 
 const Certificates: React.FC<Props> = (props) => {
   return (

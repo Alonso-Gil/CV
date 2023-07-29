@@ -1,7 +1,7 @@
 import { PersonalInformationProps as Props } from "./PersonalInformation.types";
 import Styles from "./PersonalInformation.styles";
 
-import PersonalInformationSVG from "assets/personal-information-icon.svg";
+import PersonalInformationSVG from "assets/images/personal-information-icon.svg";
 
 const PersonalInformation: React.FC<Props> = (props) => {
   return (

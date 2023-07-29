@@ -14,7 +14,7 @@ import Languages from "./Languages/Languages";
 import Education from "./Education/Education";
 import SkillCard from "./SkillCard/SkillCard";
 
-import BrushSVG from "assets/brush.svg";
+import BrushSVG from "assets/images/brush.svg";
 
 const HomeContent: React.FC<Props> = (props) => {
   const [showStyle, setShowStyle] = useState(false);

@@ -1,7 +1,7 @@
 import { EducationProps as Props } from "./Education.types";
 import Styles from "./Education.styles";
 
-import SchoolSVG from "assets/school.svg";
+import SchoolSVG from "assets/images/school.svg";
 
 const Education: React.FC<Props> = (props) => {
   return (

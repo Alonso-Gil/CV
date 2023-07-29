@@ -7,7 +7,7 @@ import Styles from "./SideMenu.styles";
 import { SideMenuProps as Props } from "./SideMenu.types";
 import { socialMediaImages } from "./SideMenu.helpers";
 
-import ProfilePNG from "assets/profile.png";
+import ProfilePNG from "assets/images/profile.png";
 
 const SideMenu: React.FC<Props> = (props) => {
   const { className } = props;
