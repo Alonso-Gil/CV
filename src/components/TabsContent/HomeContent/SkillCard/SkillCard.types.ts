@@ -9,5 +9,4 @@ export interface SkillCardProps {
 // Styled Component Props
 export interface SkillCardStyledProps {
   className: string;
-  gradientRandom: number;
 }

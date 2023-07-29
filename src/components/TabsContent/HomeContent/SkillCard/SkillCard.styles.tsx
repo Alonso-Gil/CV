@@ -13,8 +13,7 @@ const SkillCardStyled = styled.div<Props>`
       width: min-content;
       white-space: nowrap;
       padding: 1rem;
-      background: ${(props) =>
-        `linear-gradient(${props.gradientRandom}deg, #cbbacc 0%, #2580b3 100%)`};
+      background: var(--palette-white);
     }
 
     &__otherSkill {

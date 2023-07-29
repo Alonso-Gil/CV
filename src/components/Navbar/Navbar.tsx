@@ -10,7 +10,6 @@ import UserSVG from "assets/images/user.svg";
 
 const Navbar: React.FC<Props> = (props) => {
   const { actualTab, setActualTab } = props;
-  console.log(actualTab);
 
   return (
     <Styles className="Navbar">

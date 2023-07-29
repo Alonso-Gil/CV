@@ -6,7 +6,7 @@ import CONSTANTS from "config/constants";
 const { mobile } = CONSTANTS.BREAKPOINTS;
 
 const HomeContentStyled = styled.div<Props>`
-  z-index: 1;
+  z-index: 2;
 
   .HomeContent {
     &__skillsContainer {

@@ -5,10 +5,9 @@ import { SkillCardProps as Props } from "./SkillCard.types";
 
 const SkillCard: React.FC<Props> = (props) => {
   const { skill, principal } = props;
-  const gradientRandom = Math.floor(Math.random() * 521) - 260;
 
   return (
-    <Styles className="SkillCard" gradientRandom={gradientRandom}>
+    <Styles className="SkillCard">
       <p className={principal ? "SkillCard__skill" : "SkillCard__otherSkill"}>
         {skill}
       </p>

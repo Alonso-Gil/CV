@@ -12,7 +12,7 @@ export const palette = {
   black: "hsla(0, 0%, 0%, 1)",
   white: "hsla(0, 0%, 100%, 1)",
   gradient: "linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%)",
-  "black-s0-l10-a50": "hsla(0, 0%, 10%, 0.5)",
+  "black-s0-l10-a50": "hsla(0, 0%, 10%, 0.5X)",
   "black-s0-l10": "hsla(0, 0%, 10%, 1)",
   "black-s0-l15": "hsla(0, 0%, 15%, 1)",
   "gray-s0-l20-a04": "hsla(0, 0%, 20%, 0.04)",
