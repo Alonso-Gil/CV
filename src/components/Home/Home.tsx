@@ -13,7 +13,9 @@ import Projects from "components/TabsContent/Projects/Projects";
 import SwitchDarkMode from "components/Global/SwitchDarkMode/SwitchDarkMode";
 
 import BackgroundJPG from "assets/images/mountains2.jpg";
-import Background2JPG from "assets/images/background.jpg";
+import PersonalInformation from "components/Home/PersonalInformation/PersonalInformation";
+import Curriculum from "./Curriculum/Curriculum";
+import PresentationCard from "./PresentationCard/PresentationCard";
 
 const Home: React.FC<Props> = (props) => {
   const { scrollYProgress } = useScroll();
@@ -74,34 +76,18 @@ const Home: React.FC<Props> = (props) => {
             src={BackgroundJPG}
             alt="Imagen de fondo de DCStudio"
             className="Home__backgroundImage"
+            priority
           />
-        </div>
-        <div className="Home__cardContainer">
-          <div className="Home__card"></div>
-        </div>
-        <div className="Home__cardContainer2">
-          <div className="Home__card2">
-            <p className="Home__text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
-              nostrum amet nam labore aperiam, voluptate at ullam minus,
-              praesentium mollitia veniam ipsum modi sed neque saepe magnam
-              accusantium nulla repellendus!
-            </p>
+          <div className="Home__background__firstContainer">
+            <PresentationCard />
           </div>
-          <div className="Home__imageContainer">
-            <Image
-              src={Background2JPG}
-              alt="Imagen de fondo de DCStudio"
-              className="Home__image"
-            />
-            <p className="Home__firstContainer">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-              obcaecati nam dolorem quasi esse laborum nulla. Saepe quae atque
-              aliquam quidem a optio voluptatem eum eligendi veniam, dignissimos
-              harum assumenda.
-            </p>
-            <div className="Home__secondContainer"></div>
-          </div>
+          <div className="Home__background__secondContainer"></div>
+        </div>
+        <div className="Home__firstContainer">
+          <Curriculum />
+        </div>
+        <div className="Home__secondContainer">
+          <PersonalInformation />
         </div>
       </motion.main>
       <footer className="Home__footer" />

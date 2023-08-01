@@ -8,10 +8,10 @@ import ImagesSplide from "./ImagesSplide/ImagesSplide";
 import TextsSplide from "./TextsSplide/TextsSplide";
 import useGlobal from "contexts/global/global.hooks";
 import { skillsData } from "./HomeContent.helpers";
-import PersonalInformation from "./PersonalInformation/PersonalInformation";
-import Certificates from "./Certificates/Certificates";
-import Languages from "./Languages/Languages";
-import Education from "./Education/Education";
+// import PersonalInformation from "../../Home/PersonalInformation/PersonalInformation";
+// import Certificates from "./Certificates/Certificates";
+// import Languages from "./Languages/Languages";
+// import Education from "./Education/Education";
 import SkillCard from "./SkillCard/SkillCard";
 
 import BrushSVG from "assets/images/brush.svg";
@@ -72,14 +72,6 @@ const HomeContent: React.FC<Props> = (props) => {
             ))}
           </div>
         </motion.div>
-      </div>
-      <div className="HomeContent__two-blocks">
-        <PersonalInformation />
-        <Education />
-      </div>
-      <div className="HomeContent__two-blocks">
-        <Certificates />
-        <Languages />
       </div>
     </Styles>
   );

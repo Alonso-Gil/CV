@@ -1,8 +1,22 @@
 import { css } from "styled-components";
+import { Open_Sans, Dancing_Script } from "next/font/google";
+
+const OpenSans = Open_Sans({
+  subsets: ["latin"],
+});
+
+const DancingScript = Dancing_Script({
+  subsets: ["latin"],
+});
 
 const typography = css`
+  :root {
+    --font-primary: ${OpenSans.style.fontFamily};
+    --font-secondary: ${DancingScript.style.fontFamily};
+  }
+
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary), "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.4rem;

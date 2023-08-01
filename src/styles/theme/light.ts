@@ -1,7 +1,7 @@
 import defaultTheme from "./default";
 
 const palette = { ...defaultTheme.palette };
-palette.background = palette["gray-s0-l75"];
+palette.background = palette.primary;
 
 const theme = { ...defaultTheme, palette };
 

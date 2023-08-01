@@ -1,13 +1,13 @@
 export const palette = {
   empty: "", // Fixes a bug with styled components that appends a coma
-  primary: "rgb(94, 94, 96, 1)",
+  primary: "rgb(197, 68, 53, 1)",
   secondary: "rgb(71, 71, 75, 1)",
   tertiary: "rgb(48, 49, 53, 1)",
   quaternary: "rgb(27, 28, 35, 1)",
-  background: "rgb(0, 2, 16, 1)",
-  backgroundOpacity: "rgb(0, 2, 16, 0.7)",
-  backgroundContrast: "rgb(220, 186, 203, 0.8)",
-  backgroundHover: "rgb(231, 186, 211, 0.08)",
+  background: "rgba(79, 26, 23, 1)",
+  backgroundOpacity: "rgba(125, 38, 35, 0.7)",
+  backgroundHover: "rgba(197, 68, 53, 0.7)",
+  contrast: "rgba(24, 24, 24, 1)",
   border: "rgb(232, 239, 255, 0.3)",
   black: "hsla(0, 0%, 0%, 1)",
   white: "hsla(0, 0%, 100%, 1)",

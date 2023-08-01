@@ -6,7 +6,7 @@ const SwitchDarkModeStyled = styled.div<Props>`
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  z-index: 2;
+  z-index: 10;
 
   .SwitchDarkMode {
     &__container {
